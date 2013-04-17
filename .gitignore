@@ -1,0 +1,17 @@
+
+
+.project
+
+default.properties
+
+bin/
+gen/
+release/
+*/*.iml
+*/*.ipr
+*/*.iws
+*/.settings/
+.metadata
+project.properties
+*/project.properties
+old-dev-builds/
