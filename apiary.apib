@@ -1,0 +1,76 @@
+FORMAT: 1A
+HOST: https://otto-dj-staging.herokuapp.com/api/
+
+# Generator API
+
+Generator api stores the track and it's metadata details which will be used by client application. Client application is of OSX, iOS and Android.
+
+# Generator API Root [/]
+
+This resource does not have any attributes. Instead it offers the initial
+API affordances in the form of the links in the JSON body.
+
+## Retrieve the Entry Point [GET]
+
++ Response 200 (application/json)
+
+        {
+            "signup_url": "/signup"
+        }
+        
+## Group User Actions
+
+Resource related to user related actions in the API.
+## User Sign up
+
+User can sign up using this action.
+
++ emailId (string) - Unique user email id
++ username (string) - Unique user name
++ password (string)
++ isAdmin (boolean) - User has admin right or not
+
+
+### Sign up 1.0.0 [/v1/signup]
+### version 1.0.0 [POST]
+
++ Request (application/json)
+
+    + Body
+            
+            {
+                "emailId": "bipinvaylu@gmail.com",
+                "username": "bipin",
+                "password": "bipin@123"
+            }
+
++ Response 200 (application/json)
+
+    + Body
+    
+            {
+                "success": true,
+                "message": "User sign up successfully."
+            }
+
+### Sign up 2.0.0 [/v2/signup]
+### version 2.0.0 [POST]
+
++ Request (application/json)
+
+    + Body
+            
+            {
+                "emailId": "bipinvaylu@gmail.com",
+                "username": "bipin",
+                "password": "bipin@123"
+            }
+
++ Response 200 (application/json)
+
+    + Body
+    
+            {
+                "success": true,
+                "message": "User sign up successfully."
+            }
